@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piscine Web</title>
+    <style>
+         h1 {
+            font-size: 100px;
+            text-align: center;
+            
+        }
+        img {
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            height: 50vh;
+            width: auto;
+            margin-top: 20px;
+        }
+        .image-container img:first-of-type {
+            margin-right: 20px; 
+        }
+        .image-container {
+            display: flex; 
+            justify-content: center; 
+        }
+    </style>
+</head>
+<body>
+    <h1>Piscine Web</h1>
+    <div class="image-container">
+        <img src="https://scontent.fbkk5-4.fna.fbcdn.net/v/t39.30808-6/243067731_1753991538324298_8549916390031069303_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_ohc=MrI-DbbNsbMQ7kNvgHm9Qkh&_nc_ht=scontent.fbkk5-4.fna&_nc_gid=AWvfMcf9hMH3YRMBr2n4p5O&oh=00_AYCSIEq75dWIP2ht6gI-2QkQYq65GNsWX2c6cNU6SxjdgQ&oe=66E7C583" alt="Kamisato Ayaka">
+        <img src="https://static.wikia.nocookie.net/sono-bisque-doll-wa-koi-wo-suru/images/2/28/Marin_Kitagawa_cosplaying_as_Shizuku_Kuroe.png/revision/latest?cb=20220225140100" alt="Kitagawa Marin">
+        </a>
+    </div>
+</body>
+</html>
