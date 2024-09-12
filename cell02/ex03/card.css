@@ -1,1 +1,82 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
 
+/* Card Style */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Card Title */
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Invisible Table */
+.invisible-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Login */
+.login {
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Description */
+.description {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #777;
+}
+
+/* Social Media Icons */
+.social-media {
+    margin: 10px 0;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0 5px;
+}
+
+/* Contact Button */
+.contact-btn {
+    background-color: black; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-btn:hover {
+    background-color: gray; /* Darker green on hover */
+}
