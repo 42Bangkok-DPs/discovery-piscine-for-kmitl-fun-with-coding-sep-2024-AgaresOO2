@@ -1,12 +1,16 @@
 body, html {
     margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
 }
 
-
-.background-image {
+.p1 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+.p1 {
     background-image: url('https://images8.alphacoders.com/134/thumb-1920-1345025.png'); 
     background-size: cover;
     background-position: center;
@@ -14,23 +18,35 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.p2 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
     color: white;
 }
 
-.centered-message {
-    text-align: center;
-}
 
-
-.black-block {
+.p2{
     background-color: black;
-    color: white;
-    padding: 50px;
-    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
 }
 
-
-.second-image {
+.p3 h1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+.p3 {
     background-image: url('https://images6.alphacoders.com/137/thumb-1920-1376484.png'); 
     background-size: cover;
     background-position: center;
@@ -38,5 +54,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     color: white;
 }
