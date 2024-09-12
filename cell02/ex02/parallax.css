@@ -1,0 +1,42 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
+.background-image {
+    background-image: url('https://images8.alphacoders.com/134/thumb-1920-1345025.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.centered-message {
+    text-align: center;
+}
+
+
+.black-block {
+    background-color: black;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+
+.second-image {
+    background-image: url('https://images6.alphacoders.com/137/thumb-1920-1376484.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
