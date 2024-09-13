@@ -42,7 +42,10 @@
                 let result;
 
                 
-
+               if (leftOperand === '' || rightOperand === '' || leftOperand < 0 || rightOperand < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
                 // ตรวจสอบการหารหรือการ modulo ด้วย 0
                 if ((operator === '/' || operator === '%') && rightOperand === 0) {
                     alert("It's over 9000!"); // ถ้าทำการหารหรือ modulo ด้วย 0
