@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 36px;
+        }
+
+        #newTaskBtn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        #newTaskBtn:hover {
+            background-color: #45a049;
+        }
+
+        .todo-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #ffffff;
+            margin: 10px 0;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .delete {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .delete:hover {
+            background-color: gray;
+        }
+
+        #ft_list {
+            width: 100%;
+            max-width: 80vw;
+            margin: 0 auto;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            const $ftList = $('#ft_list');
+
+            function saveTasksToCookie() {
+                const tasks = [];
+                $ftList.children('div').each(function() {
+                    tasks.push($(this).text().replace('Delete', '').trim());
+                });
+                document.cookie = `tasks=${JSON.stringify(tasks)}; path=/`;
+            }
+
+            function loadTasksFromCookie() {
+                const tasksCookie = document.cookie.split('; ').find(row => row.startsWith('tasks='));
+                if (tasksCookie) {
+                    const tasks = JSON.parse(tasksCookie.split('=')[1]);
+                    tasks.forEach(task => addTask(task));
+                }
+            }
+
+            function addTask(taskText) {
+                if (!taskText || taskText.trim() === "") return;
+                
+                const $taskDiv = $('<div>', { class: 'todo-item' }).text(taskText);
+                const $delBtn = $('<button>', { class: 'delete', text: 'Delete' });
+
+                $delBtn.on('click', function() {
+                    if (confirm('Do you want to remove this task?')) {
+                        $(this).parent().remove();
+                        saveTasksToCookie();
+                    }
+                });
+
+                $taskDiv.append($delBtn);
+                $ftList.prepend($taskDiv);
+                saveTasksToCookie();
+            }
+
+            $('#newTaskBtn').on('click', function() {
+                const newTask = prompt('Enter a new task:');
+                if (newTask) {
+                    addTask(newTask);
+                }
+            });
+
+            loadTasksFromCookie();
+        });
+    </script>
+</head>
+<body>
+    <h1>To-Do List</h1>
+    <button id="newTaskBtn">New</button>
+    <div id="ft_list"></div>
+</body>
+</html>
